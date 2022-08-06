@@ -6,7 +6,7 @@ First of all , I will try to brief about workshop.
 This worskshop held between 3 to 7th August 2022 with the title "sky130-pd-workshop".
 It was basically about physical design. I get to learn the whole physical design flow with tool Openlane flow.
 
-What is Openlane?
+**What is Openlane?**
 
 Openalane is automated RTL to GDSII flow, an tcl based complete flow for Physical design.
 It is the supeset of the tolls like OPenRoad, Yosys, Netgen, CVC, SPEF_Extractor, CU-GR, Klayout and a lot of custom scripting of
