@@ -133,7 +133,9 @@ awadhesh.chauhan@sky130-pd-workshop-02:~/Desktop/work/tools/openlane_working_dir
  
  ![image](https://user-images.githubusercontent.com/97517284/183263069-b4b434ef-5f1a-4118-9c1f-d60df34a4a71.png)
  
- Extract spice netlist 
+ **Extract spice netlist**
+ 
+ This generates teh sky130_inv.ext and sky130_inv.spice files.
  
  
  
@@ -144,4 +146,86 @@ awadhesh.chauhan@sky130-pd-workshop-02:~/Desktop/work/tools/openlane_working_dir
  **ext2spice**
  
  ![image](https://user-images.githubusercontent.com/97517284/183263192-29a31e46-1e86-456d-8ab8-e2006e23bfac.png)
+ 
+ 
+ Spice file 
+ 
+ ![image](https://user-images.githubusercontent.com/97517284/183263377-b14b0ce0-745d-479f-b363-a1d9f6727fc5.png)
 
+the updated spice file
+
+We have Update the sky130_inv.spice file to use the correct scaling factor and models. From the tkcon the root cell box is 0.01 x 0.01 microns. The scale is change to `.option scale =0.01u'
+
+![image](https://user-images.githubusercontent.com/97517284/183263484-fcbc9b23-6dbc-4112-8090-01005861fb76.png)
+
+ 
+
+**Simulating the spice file**
+
+![image](https://user-images.githubusercontent.com/97517284/183263935-3a1a6e4a-c6fa-49ae-9439-46d46cad1c36.png)
+
+Plotting the result
+ plot y vs time a
+ 
+![image](https://user-images.githubusercontent.com/97517284/183263976-282a0912-2f73-4b1b-bbb9-767c865d0617.png)
+
+
+**Inverter Cell**
+
+ Going the the directroy and running magic by the below command
+ 
+ ‌magic -d XR -T sky130A.tech sky130_inv.mag&
+ 
+![image](https://user-images.githubusercontent.com/97517284/183264111-a70142b9-5380-4f19-a531-b4b0bcab9bcc.png)
+
+ ‌magic -d XR -T sky130A.tech sky130_inv.mag&
+
+![image](https://user-images.githubusercontent.com/97517284/183264225-f0785681-0df0-4ca9-94b2-86a9ee26c078.png)
+
+
+save the file 
+
+![image](https://user-images.githubusercontent.com/97517284/183264408-c9b42ede-fcba-40ec-8bb3-31c3dbf6577d.png)
+
+Location of the file where its is saved
+
+
+Open the new file using magic -d XR -T sky130A.tech sky130_jayinv.mag&
+
+![image](https://user-images.githubusercontent.com/97517284/183264512-a7c8184e-bfdf-4fb6-8fa9-7c9ab07abd5d.png)
+
+![image](https://user-images.githubusercontent.com/97517284/183264435-8d9c57cc-002e-4254-bf89-789935e8a690.png)
+
+![image](https://user-images.githubusercontent.com/97517284/183264547-843975da-b345-4e9c-ab8f-9e03eb5669bf.png)
+
+
+SRC file setup
+
+cd /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/extras
+
+cp my_base.sdc /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+cd  /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/
+
+copy the sky130 libraries to the picorv32a/src
+
+![image](https://user-images.githubusercontent.com/97517284/183264924-04759ae9-fd58-48bd-8590-48a6247fe7ab.png)
+
+**config.tcl**
+
+Modify the config.tcl to include the copied libraries at /home/p-brane/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/config.tcl The modified file is shown below. LIB_MIN was replaced with LIB_FASTEST, and LIB_MAX was replace with LIB_SLOWEST.
+
+![image](https://user-images.githubusercontent.com/97517284/183265510-8d86743b-2764-42d7-a9a2-1059688de375.png)
+
+**Now run openlane**
+
+docker
+./flow.tcl interactive
+package require openlane 0.9
+prep -design picorv32a -tag 04-08_06-57 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+
+
+![image](https://user-images.githubusercontent.com/97517284/183265996-5f926312-e448-40d5-8edc-c0168a12b65b.png)
