@@ -132,3 +132,16 @@ awadhesh.chauhan@sky130-pd-workshop-02:~/Desktop/work/tools/openlane_working_dir
  The inverter Layout
  
  ![image](https://user-images.githubusercontent.com/97517284/183263069-b4b434ef-5f1a-4118-9c1f-d60df34a4a71.png)
+ 
+ Extract spice netlist 
+ 
+ 
+ 
+ **extract all** 
+ 
+ **ext2spice cthresh 0 rthresh 0**
+ 
+ **ext2spice**
+ 
+ ![image](https://user-images.githubusercontent.com/97517284/183263192-29a31e46-1e86-456d-8ab8-e2006e23bfac.png)
+
