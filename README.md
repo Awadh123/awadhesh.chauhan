@@ -12,3 +12,8 @@ Openalane is automated RTL to GDSII flow, an tcl based complete flow for Physica
 It is the supeset of the tolls like OPenRoad, Yosys, Netgen, CVC, SPEF_Extractor, CU-GR, Klayout and a lot of custom scripting of
 python and tcl for optimization and exploration. This opensource floe is tasted for full ASIC implementation steps from RTL to GDSII.
 
+**Introduction to openlab flow lab**
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/openlane%20flow%20.png)
+
+this is the openlan flow block diagram ,it tells at what stage which tool is used along with the flow.
