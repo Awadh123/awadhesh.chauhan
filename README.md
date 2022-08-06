@@ -116,6 +116,19 @@ Placement is the way of determining the locations of the circuit devices on a di
 
 
 
+**CMOS STANDARD CELL**
 
+We have to download the vsdstdcelldesign from the github below provided link:
 
+clone https://github.com/nickson-jose/vsdstdcelldesign.git to clone std cell library at openlane folder and it will create folder name vsdstdcelldesign
 
+copied sky130A.tech :
+
+![image](https://user-images.githubusercontent.com/97517284/183262975-ec2e31c7-3e1e-4275-a475-0b9cbdc6a8e9.png)
+
+Below command is use dto run inverter in the magic to see layout:
+
+awadhesh.chauhan@sky130-pd-workshop-02:~/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign$ magic -T sky130A.tech sky130_inv.mag &
+ The inverter Layout
+ 
+ ![image](https://user-images.githubusercontent.com/97517284/183263069-b4b434ef-5f1a-4118-9c1f-d60df34a4a71.png)
