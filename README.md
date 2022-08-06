@@ -37,3 +37,62 @@ it sync all the package required to the openlane specific version
 
 ![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/2.%20.png)
 
+
+prep -design picorv32a -->design setup stage
+
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/3.%20design%20prepration%20stage.png)
+
+
+**synthesis**
+
+Synthesis is the process of conversion of the program into the circuit linke interms of flops, gates ect.
+In this flow Yosys for synthesis and abc for technology mapping has been used.
+
+
+to run synthesis below command is used 
+
+**run_synthesis**
+
+after running this the synthesised rtl is saved at the location
+
+awadhesh.chauhan@sky130-pd-workshop-02:~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/synthesis$
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/4.%20synthesis%20completed.png)
+
+from the generated output report we get to know 
+
+The flop ratio = 1613/14876=0.1084
+
+The buffer ratio = 1656/14876
+
+Below are the reports that are generated after synthesis:
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/6.%20reports%20generated%20after%20synthesis.png)
+
+**Floorplan**
+
+
+In physical design , floorplaning is the step of determining the size,shape and locations of modules in a chip and to estimate the total chip area,delay and interconnects
+
+to run floorplaning below command is used :
+
+**run_floorplan*
+
+Magic view of floorplans:
+
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/floorplan%20magic%20view%201.png)
+
+This the zoomed view of the specific part:
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/floorplan%20magic%20view.png)
+
+
+
+
+
+
+
+
+
