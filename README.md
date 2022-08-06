@@ -93,11 +93,26 @@ This the zoomed view of the specific part:
 
 ![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/floorplan%20magic%20view.png)
 
-if we to change any paprmeter we can use this way . In the above images pin placements are with equal spacing but we want to change it to random spacing of the pins: 
+if we to change any paprmeter we can use this way . In the above images pin placements are with equal spacing but we want to change it to random spacing of the pins
+
+
 
 ![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/command%20top%20update%20parameters.png)
 
 
+We updated the property and saw the result again.
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/floorplan%20result%20after%20property%20update.png)
+
+In this image pin placement is random.
+
+
+
+
+
+**Placement**
+
+Placement is the way of determining the locations of the circuit devices on a die of the chip.It gives effect on routablity,performance,heat distribution and a little bit power consumption.
 
 
 
