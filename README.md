@@ -114,6 +114,9 @@ In this image pin placement is random.
 
 Placement is the way of determining the locations of the circuit devices on a die of the chip.It gives effect on routablity,performance,heat distribution and a little bit power consumption.
 
+![image](https://user-images.githubusercontent.com/97517284/183267640-7b11cf5b-73b2-4a2a-9fd0-904a1b7e2a79.png)
+
+![image](https://user-images.githubusercontent.com/97517284/183267657-adacffbe-3d80-4e59-9808-cc25163a1ad2.png)
 
 
 **CMOS STANDARD CELL**
@@ -221,10 +224,15 @@ Modify the config.tcl to include the copied libraries at /home/p-brane/Desktop/w
 
 docker
 ./flow.tcl interactive
+
 package require openlane 0.9
+
 prep -design picorv32a -tag 04-08_06-57 -overwrite
+
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+
 add_lefs -src $lefs
+
 run_synthesis
 
 
