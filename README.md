@@ -77,17 +77,25 @@ In physical design , floorplaning is the step of determining the size,shape and 
 
 to run floorplaning below command is used :
 
-**run_floorplan*
+**run_floorplan**
 
 Magic view of floorplans:
 
 
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/running%20magic%20for%20floorplaning.png)
+
+
+
 ![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/floorplan%20magic%20view%201.png)
+
 
 This the zoomed view of the specific part:
 
 ![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/floorplan%20magic%20view.png)
 
+if we to change any paprmeter we can use this way . In the above images pin placements are with equal spacing but we want to change it to random spacing of the pins: 
+
+![alt text](https://github.com/Awadh123/awadhesh.chauhan/blob/main/command%20top%20update%20parameters.png)
 
 
 
