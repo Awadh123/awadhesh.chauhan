@@ -237,3 +237,63 @@ run_synthesis
 
 
 ![image](https://user-images.githubusercontent.com/97517284/183265996-5f926312-e448-40d5-8edc-c0168a12b65b.png)
+
+**Static time analysis**  
+
+![image](https://user-images.githubusercontent.com/97517284/183286221-1f436f4a-17a4-46e2-a8c7-50f0fe2eb429.png)
+
+**Floorplan**
+
+Now , We have to run the following commmands sequentially
+
+init_floorplan
+
+place_io
+
+global_placement_or
+
+detailed_placement
+
+tap_decap_or
+
+detailed_placement
+
+gen_pdn
+
+run_routing
+
+**Magic**
+
+Now we are going to view the placement on magic using the below command
+
+magic -d XR -T /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/tmp/merged.lef def read /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/placement/picorv32a.placement.def&
+
+![image](https://user-images.githubusercontent.com/97517284/183286721-630bfe14-1fe1-423e-916e-4be0fdbcefdb.png)
+
+**power Distribution Network**
+
+As placement gets all legality checks, we run the gen_pdn command to generate th PDN.
+
+![image](https://user-images.githubusercontent.com/97517284/183286982-257f953d-6cf1-46ae-ba6f-cf273eea4867.png)
+
+**Routing**
+Routing is the process of stablishing physical connections betweeen signal pins using metal layers is called routing.It is a stage after CTS and optimizing when exact paths for the interconnection of standard cells and macros and I/O pins are determined.
+
+**run_routing** command is used for routing in openlane flow.
+
+![image](https://user-images.githubusercontent.com/97517284/183287286-c6abcbfc-db89-4daa-9a62-c1f4e76c9c34.png)
+
+The 20-tritonRouting.drc log file can be found at /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/runs/03-08_19-58/reports/routing/ and shows the DRC violations. They are shown below:
+
+![image](https://user-images.githubusercontent.com/97517284/183287379-35599eff-d30a-447d-8a86-f92c1444367d.png)
+
+
+**Magic**
+
+below is the commmand to see routinng in the magic
+
+magic -d XR -T /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/tmp/merged.lef def read /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/routing/picorv32a.def&
+
+![image](https://user-images.githubusercontent.com/97517284/183287503-75a20fce-68d0-463b-83a1-90856219c84b.png)
+
+
