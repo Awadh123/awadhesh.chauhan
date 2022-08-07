@@ -296,4 +296,17 @@ magic -d XR -T /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/pd
 
 ![image](https://user-images.githubusercontent.com/97517284/183287503-75a20fce-68d0-463b-83a1-90856219c84b.png)
 
+**SPEF FILE GENERATION**
+Data from wires in a chip are represented in the ASCII format known as Standard Parasitic Exchange Format (SPEF).A programme called SPEF EXTRACTOR is part of OpenLANE and is used to create SPEF files. It is a Python-based parser that creates the SPEF file from the LEF and DEF files as input inputs.
+
+Below is the command to invoke SPEF_EXTRACTOR
+
+cd ../tools/SPEF_EXTRACTOR
+python3 main.py /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/07-08_10-13/tmp/merged.lef  /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/07-08_10-13/results/floorplaning/picorv32q.def
+
+
+
+below is trhe extracted .spef file short snop;
+
+![image](https://user-images.githubusercontent.com/97517284/183288159-2689fd20-0983-4084-8b2b-1f35dbc756aa.png)
 
