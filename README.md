@@ -302,7 +302,7 @@ Data from wires in a chip are represented in the ASCII format known as Standard 
 Below is the command to invoke SPEF_EXTRACTOR
 
 cd ../tools/SPEF_EXTRACTOR
-python3 main.py /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/07-08_10-13/tmp/merged.lef  /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/07-08_10-13/results/floorplaning/picorv32q.def
+python3 main.py /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/tmp/merged.lef  /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/floorplaning/picorv32q.def
 
 
 
