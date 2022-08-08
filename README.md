@@ -294,7 +294,8 @@ below is the commmand to see routinng in the magic
 
 magic -d XR -T /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/tmp/merged.lef def read /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/routing/picorv32a.def&
 
-![image](https://user-images.githubusercontent.com/97517284/183287503-75a20fce-68d0-463b-83a1-90856219c84b.png)
+![image](https://user-images.githubusercontent.com/97517284/183480373-f8d0f376-a3f2-4cbe-af40-612fd35ead7c.png)
+
 
 **SPEF FILE GENERATION**
 Data from wires in a chip are represented in the ASCII format known as Standard Parasitic Exchange Format (SPEF).A programme called SPEF EXTRACTOR is part of OpenLANE and is used to create SPEF files. It is a Python-based parser that creates the SPEF file from the LEF and DEF files as input inputs.
@@ -302,11 +303,12 @@ Data from wires in a chip are represented in the ASCII format known as Standard 
 Below is the command to invoke SPEF_EXTRACTOR
 
 cd ../tools/SPEF_EXTRACTOR
-python3 main.py /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/tmp/merged.lef  /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/floorplaning/picorv32q.def
+python3 main.py /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/tmp/merged.lef  /home/awadhesh.chauhan/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-08_19-58/results/floorplaning/picorv32a.def
 
 
 
 below is trhe extracted .spef file short snop;
 
-![image](https://user-images.githubusercontent.com/97517284/183288159-2689fd20-0983-4084-8b2b-1f35dbc756aa.png)
+![image](https://user-images.githubusercontent.com/97517284/183479847-59257452-2439-4824-a639-8f03899a2316.png)
+
 
